@@ -1,0 +1,215 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
+}
+header{
+    color: #fff;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #111;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #111, #444);
+  color: white;
+  text-align: center;
+}
+
+.hero .highlight {
+  color: #ffcc00;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 80px 5%;
+}
+
+.skills, .contact {
+  background: #fff;
+  margin-top: 60px;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Portfolio Grid */
+.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio .card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.portfolio .card img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input,
+.contact form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form button {
+  padding: 10px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background: #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+  margin-top: 20px;
+}
+#typing {
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-right: 2px solid #ffcc00;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+/* Hero layout */
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%; /* circular shape */
+  object-fit: cover; /* keeps aspect ratio */
+  border: 5px solid #ffcc00; /* golden border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* soft shadow */
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05); /* zoom effect on hover */
+}
+/* Navbar Logo */
+.logo img {
+  height: 50px;  /* adjust size */
+  width: auto;
+  border-radius: 8px; /* optional: make rounded corners */
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* zoom effect on hover */
+}
+/* About Section Layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+/* Profile Picture Circular */
+.about-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;  /* ensures proper crop */
+  border: 5px solid #111; /* dark border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* soft shadow */
+}
+
+/* About Text */
+.about-text {
+  flex: 1; /* take remaining space */
+  min-width: 250px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
