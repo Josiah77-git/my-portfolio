@@ -138,3 +138,59 @@ allSections.forEach(section => {
   section.classList.add("hidden-section");
   sectionObserver.observe(section);
 });
+
+// ======================
+// About Section Slideshow with Fade
+// ======================
+const aboutPic = document.getElementById("about-pic");
+
+// List of images to rotate
+const images = ["me1.png", "me2.png", "me3.png"]; // replace with your images
+let currentIndex = 0;
+
+setInterval(() => {
+  // Fade out
+  aboutPic.style.opacity = 0;
+
+  setTimeout(() => {
+    // Change image after fade out
+    currentIndex = (currentIndex + 1) % images.length;
+    aboutPic.src = images[currentIndex];
+
+    // Fade in
+    aboutPic.style.opacity = 1;
+  }, 800); // matches CSS transition (0.8s)
+}, 4000);
+// Animate skills progress bars when section is visible
+const skillBars = document.querySelectorAll('.progress-fill');
+
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fill = entry.target;
+      fill.style.width = fill.getAttribute('data-fill');
+    }
+  });
+}, { threshold: 0.5 });
+
+skillBars.forEach(bar => {
+  skillObserver.observe(bar);
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(".progress-bar");
+
+  bars.forEach(bar => {
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+    tooltip.innerText = `${bar.dataset.info} — ${bar.dataset.percent}`;
+    bar.appendChild(tooltip);
+
+    bar.addEventListener("mouseenter", () => {
+      tooltip.style.opacity = "1";
+    });
+
+    bar.addEventListener("mouseleave", () => {
+      tooltip.style.opacity = "0";
+    });
+  });
+});
