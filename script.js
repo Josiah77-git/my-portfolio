@@ -16,7 +16,7 @@ document.querySelectorAll('nav ul li a').forEach(link => {
 // ======================
 const roles = [
   "ICT Graduate",
-  "Data Privacy Learner",
+  "Data Protection Officer (DPO)",
   "Graphic Designer",
   "Tech Enthusiast"
 ];
